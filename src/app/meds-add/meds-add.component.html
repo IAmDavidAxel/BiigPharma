@@ -1,0 +1,9 @@
+<div class="form-container" [formGroup]="medForm" (ngSubmit)="onSubmit()">
+
+<mat-form-field appearance="outline">
+  <mat-label>Nom du médicament</mat-label>
+  <input matInput placeholder="Nom du médicament" formControlName="name">
+</mat-form-field>
+
+<button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Ajouter</button>
+</div>

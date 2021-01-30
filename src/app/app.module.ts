@@ -17,6 +17,8 @@ import {MatListModule} from '@angular/material/list';
 import { PharmacyComponent } from './pharmacy/pharmacy.component';
 import { MedsComponent } from './meds/meds.component';
 import { PharmacyAddComponent } from './pharmacy-add/pharmacy-add.component';
+import { MedsAddComponent } from './meds-add/meds-add.component';
+import {HttpClient, HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { PharmacyAddComponent } from './pharmacy-add/pharmacy-add.component';
     ProfileComponent,
     PharmacyComponent,
     MedsComponent,
-    PharmacyAddComponent
+    PharmacyAddComponent,
+    MedsAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,8 @@ import { PharmacyAddComponent } from './pharmacy-add/pharmacy-add.component';
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
+    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

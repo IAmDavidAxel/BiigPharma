@@ -1,21 +1,21 @@
-<div class="form-container">
+<div class="form-container" [formGroup]="pharmacyForm" (ngSubmit)="onSubmit()">
 
   <mat-form-field appearance="outline">
     <mat-label>Nom de la Pharmacy</mat-label>
-    <input matInput placeholder="Nom de la Pharmacy">
+    <input matInput placeholder="Nom de la Pharmacy" formControlName="name">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Adresse</mat-label>
-    <input matInput placeholder="Adresse">
+    <input matInput placeholder="Adresse" formControlName="address">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Numero de téléphone</mat-label>
-    <input matInput placeholder="Nom de la Pharmacy">
+    <input matInput placeholder="Nom de la Pharmacy" formControlName="phoneNumber">
   </mat-form-field>
 
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Ajouter</button>
   <button class="btn btn-outline-secondary btn-block" type="button" routerLink="signUp">Annuler</button>
 
 </div>

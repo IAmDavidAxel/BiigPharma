@@ -8,6 +8,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {PharmacyComponent} from './pharmacy/pharmacy.component';
 import {MedsComponent} from './meds/meds.component';
 import {PharmacyAddComponent} from './pharmacy-add/pharmacy-add.component';
+import {MedsAddComponent} from './meds-add/meds-add.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'login/signUp', component: SignUpComponent},
   {path: 'pharmacy', component: PharmacyComponent},
   {path: 'meds', component: MedsComponent},
-  {path: 'addPharmacy', component: PharmacyAddComponent}
+  {path: 'addPharmacy', component: PharmacyAddComponent},
+  {path: 'addMeds', component: MedsAddComponent}
 ];
 
 @NgModule({

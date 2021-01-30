@@ -1,26 +1,33 @@
-<div class="form-container">
+<div class="form-container" [formGroup]="medsForm">
 
 <mat-form-field appearance="outline">
   <mat-label>Nom du medicament</mat-label>
-  <input matInput placeholder="Nom du médicament"/>
+  <input matInput placeholder="Nom du médicament" formControlName="name"/>
 </mat-form-field>
 
 <mat-form-field appearance="outline">
   <mat-label> Catégories</mat-label>
-  <input matInput placeholder="Catégories">
+  <input matInput placeholder="Catégories" formControlName="category">
 </mat-form-field>
 
   <mat-form-field appearance="outline">
   <mat-label>Description</mat-label>
-  <input matInput placeholder="Description">
+  <input matInput placeholder="Description" formControlName="description">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
   <mat-label>Quantité</mat-label>
-  <input matInput placeholder="Quantité">
+  <input matInput placeholder="Quantité" formControlName="stock">
 </mat-form-field>
 
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
+  <mat-form-field appearance="outline">
+    <mat-label>Necessite une ordonnance</mat-label>
+    <input matInput placeholder="Necessite une ordonnace" formControlName="needOrdonnance">
+  </mat-form-field>
+
+
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Ajouter</button>
   <button class="btn btn-outline-secondary btn-block" type="button" routerLink="signUp">Annuler</button>
 
 </div>
