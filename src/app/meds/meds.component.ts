@@ -24,7 +24,7 @@ public  medsForm;
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.medsService.addDrugs(this.medsForm.value).subscribe();
   }
 }
