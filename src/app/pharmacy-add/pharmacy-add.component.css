@@ -6,3 +6,8 @@
 .form-container > * {
   width: 25%;
 }
+
+.navbar-expand-xl{
+  padding-left: 0px;
+  padding-right: 0px;
+}

@@ -6,13 +6,23 @@
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Adresse</mat-label>
-    <input matInput placeholder="Adresse" formControlName="address">
+    <mat-label>Quartier</mat-label>
+    <input matInput placeholder="Quartier" formControlName="quartier">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Numero de téléphone</mat-label>
     <input matInput placeholder="Nom de la Pharmacy" formControlName="phoneNumber">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Latitude</mat-label>
+    <input matInput placeholder="Latitude" formControlName="latitude">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Longitude</mat-label>
+    <input matInput placeholder="longitude" formControlName="longitude">
   </mat-form-field>
 
   <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Ajouter</button>

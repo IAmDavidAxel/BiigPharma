@@ -9,11 +9,12 @@ import {PharmacyComponent} from './pharmacy/pharmacy.component';
 import {MedsComponent} from './meds/meds.component';
 import {PharmacyAddComponent} from './pharmacy-add/pharmacy-add.component';
 import {MedsAddComponent} from './meds-add/meds-add.component';
+import {PharmaGuard} from './pharma.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'profile', component: ProfileComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [PharmaGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'login/signUp', component: SignUpComponent},
   {path: 'pharmacy', component: PharmacyComponent},

@@ -1,1 +1,7 @@
-<h3>Ici vous trouverez la liste des pharmacy ouvertes</h3>
+<h3>Ici vous trouverez la liste des pharmacy ouvertes à proximité de vous</h3>
+
+<div *ngFor="let pharmacy of pharmacies" class="mat-card">
+  <div class="name">
+    <mat-label>{{pharmacy.name}}</mat-label>
+  </div>
+</div>
