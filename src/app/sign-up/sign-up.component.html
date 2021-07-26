@@ -1,37 +1,37 @@
 <h3> Veuillez entrer les informations necessaire a creer votre compte</h3>
 
 
-<div class="form-container">
+<div class="form-container" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
 
         <mat-form-field appearance="outline">
           <mat-label>Nom</mat-label>
-          <input matInput placeholder="Nom">
+          <input matInput placeholder="Nom" formControlName="last_name">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Prenom</mat-label>
-          <input matInput placeholder="Prenom">
+          <input matInput placeholder="Prenom" formControlName="first_name">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Adresse</mat-label>
-          <input matInput placeholder="Adresse">
+          <mat-label>Nom d'utilisateur</mat-label>
+          <input matInput placeholder="Nom d'utilisateur" formControlName="username">
         </mat-form-field>
 
-       <mat-form-field appearance="outline">
-         <mat-label>Ville</mat-label>
-         <input matInput placeholder="Ville">
-      </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="Email">
+          <input matInput placeholder="Email" formControlName="email">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Téléphone</mat-label>
-          <input matInput placeholder="Téléphone">
+          <mat-label>Mot de passe</mat-label>
+          <input type="password" matInput placeholder="Mot de passe" formControlName="password">
         </mat-form-field>
+
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Créer Compte</button>
+  <button class="btn btn-outline-secondary btn-block" type="button" routerLink="signUp">Annuler</button>
 
       </div>
 

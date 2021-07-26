@@ -19,8 +19,8 @@ public  medsForm;
       description: [''],
       price: [''],
       stock: [''],
-      category: [''],
-      needOrdonnance: ['']
+      pharmacy_id: [''],
+      need_prescription: ['']
     });
   }
 

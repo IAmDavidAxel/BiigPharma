@@ -3,28 +3,26 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {tap} from 'rxjs/operators';
 
-const endPoint = 'http://localhost:8080/api/drug/';
+const endPoint = 'http://localhost:8080/api/client/';
 const httpOptions = {
   headers: new HttpHeaders({
     'Access-Control-Allow-Origin' : '*',
     'Access-Control-Allow-Methods' : 'GET,POST,DELETE,PUT',
+    'Access-Control-Allow-Headers': '*',
     'Content-Type': 'application/json'
   })
 };
 @Injectable({
   providedIn: 'root'
 })
-export class MedsService {
+export class SignUpService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  addDrugs(medsForm): Observable<any> {
-    return this.http.post<any> (endPoint + 'create', medsForm, httpOptions).pipe(
-      tap((medForm) => console.log('added drug'))
+  createAccount(signUpForm): Observable<any> {
+    return this.httpClient.post<any>(endPoint + 'create', signUpForm, httpOptions).pipe(
+      // tslint:disable-next-line:no-shadowed-variable
+      tap((signUpForm) => console.log('account created'))
     );
-  }
-
-  findDrug(medForm): Observable<any>{
-    return this.http.get<any>(endPoint + 'drugs',  medForm).pipe();
   }
 }
