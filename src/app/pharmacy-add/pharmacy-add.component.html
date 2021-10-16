@@ -2,12 +2,22 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Nom de la Pharmacy</mat-label>
-    <input matInput placeholder="Nom de la Pharmacy" formControlName="name">
+    <input matInput placeholder="Nom de la Pharmacy" formControlName="pharmacyName">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Ville</mat-label>
+    <input matInput placeholder="longitude" formControlName="pharmacyCity">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Group</mat-label>
+    <input matInput placeholder="longitude" formControlName="group">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Quartier</mat-label>
-    <input matInput placeholder="Quartier" formControlName="quartier">
+    <input matInput placeholder="Quartier" formControlName="neighborhood">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
@@ -15,15 +25,32 @@
     <input matInput placeholder="Nom de la Pharmacy" formControlName="phoneNumber">
   </mat-form-field>
 
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nom d'utilisateur</mat-label>
+    <input matInput placeholder="Nom d'utilisateur" formControlName="username">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput placeholder="longitude" formControlName="password">
+  </mat-form-field>
+
   <mat-form-field appearance="outline">
     <mat-label>Latitude</mat-label>
-    <input matInput placeholder="Latitude" formControlName="latitude">
+    <input matInput placeholder="longitude" formControlName="latitude">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Longitude</mat-label>
     <input matInput placeholder="longitude" formControlName="longitude">
   </mat-form-field>
+
 
   <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Ajouter</button>
   <button class="btn btn-outline-secondary btn-block" type="button" routerLink="signUp">Annuler</button>

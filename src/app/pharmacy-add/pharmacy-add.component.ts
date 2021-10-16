@@ -15,9 +15,14 @@ export class PharmacyAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.pharmacyForm = this.formBuilder.group({
-      name: [''],
-      quartier: [''],
+      pharmacyName: [''],
+      neighborhood: [''],
       phoneNumber: [''],
+      group: [''],
+      username: [''],
+      email: [''],
+      password: [''],
+      pharmacyCity: [''],
       latitude: [''],
       longitude: ['']
     });

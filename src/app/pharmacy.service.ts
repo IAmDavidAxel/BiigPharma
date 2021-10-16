@@ -1,11 +1,11 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Pharmacy} from './model/Pharmacy';
+import {Pharmacy, PharmacyAdapter} from './model/Pharmacy';
 import {Observable} from 'rxjs';
-import {tap} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 
-const endPoint = 'http://172.20.10.13:8080/api/';
+const endPoint = 'http://localhost:8080/api/';
 const httpOptions = {
   headers: new HttpHeaders({
     'Access-Control-Allow-Origin' : '*',
@@ -20,17 +20,17 @@ export class PharmacyService {
 
   public pharmacy: Pharmacy;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private adapter: PharmacyAdapter) { }
 
   addPharmacy(pharmacyForm): Observable<any> {
-    return this.http.post<any> (endPoint + 'pharmacy',pharmacyForm,httpOptions).pipe(
+    return this.http.post<any> (endPoint + 'pharmacy/create',pharmacyForm,httpOptions).pipe(
       tap((pharmacyForm) => console.log('added pharmacy'))
     );
   }
 
-  findPharmacy(): Observable<any>{
-    return this.http.get<any> (endPoint + 'findAll',httpOptions).pipe(
-      tap( () => console.log('this is all the pharmacy open near you'))
+  findPharmacy(): Observable<Pharmacy[]>{
+    return this.http.get<Pharmacy[]> (endPoint + 'pharmacy/findAll',httpOptions).pipe(
+      map((data: any) => data.map(item => this.adapter.adapt(item)))
     );
   }
 }
